@@ -4,13 +4,13 @@
   <engines>
     <engine name="cordova" version=">=3.0.0"/>
   </engines>
-  <js-module name="printerk" src="www/printerk.js">
-    <clobbers target="printerk" />
+  <js-module name="PrinterKPlugin" src="www/printerk.js">
+    <clobbers target="PrinterKPlugin" />
   </js-module>
   <platform name="android">
     <config-file parent="/*" target="res/xml/config.xml">
       <feature name="Printer">
-        <param name="android-package" value="com.printerk.cordova.PrinterK" />
+        <param name="android-package" value="com.printerk.cordova.PrinterKPlugin" />
         <param name="onload" value="true" />
       </feature>
     </config-file>
@@ -21,7 +21,7 @@
         </intent-filter>
       </service>
     </config-file>
-    <source-file src="src/android/PrinterK.java" target-dir="src/com/printerk/cordova/PrinterK" />
+    <source-file src="src/android/PrinterKPlugin.java" target-dir="src/com/printerk/cordova/PrinterKPlugin" />
     <source-file src="src/android/com/sunmi/extprinterservice/ExtPrinterService.aidl" target-dir="src/com/sunmi/extprinterservice/"/>
   </platform>
 </plugin>

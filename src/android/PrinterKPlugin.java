@@ -69,7 +69,7 @@ import com.sunmi.extprinterservice.ExtPrinterService;
 /**
  * This class echoes a string called from JavaScript.
  */
-public class PrinterK extends CordovaPlugin {
+public class PrinterKPlugin extends CordovaPlugin {
   private static final String TAG = "printerk";
   private ExtPrinterService extPrinterService = null;
   private ServiceConnection connService = new ServiceConnection() {
