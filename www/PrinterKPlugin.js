@@ -1,36 +1,36 @@
 var exec = require('cordova/exec');
 
 exports.coolMethod = function (arg0, success, error) {
-  exec(success, error, 'printerk', 'coolMethod', [arg0]);
+  exec(success, error, 'PrinterKPlugin', 'coolMethod', [arg0]);
 };
 
 exports.printerInit = function () {
   return new Promise(function (resolve, reject) {
-    cordova.exec(resolve, reject, "printerk", "printerInit", []);
+    cordova.exec(resolve, reject, "PrinterKPlugin", "printerInit", []);
   });
 },
 
 exports.printColumnsText = function (colsTextArr, colsWidthArr, colsAlign) {
   return new Promise(function (resolve, reject) {
-    exec(resolve, reject, "printerk", "printColumnsText", [colsTextArr, colsWidthArr, colsAlign]);
+    exec(resolve, reject, "PrinterKPlugin", "printColumnsText", [colsTextArr, colsWidthArr, colsAlign]);
   });
 };
 
 exports.printText = function (text) {
   return new Promise(function (resolve, reject) {
-    exec(resolve, reject, "printerk", "printText", [text]);
+    exec(resolve, reject, "PrinterKPlugin", "printText", [text]);
   });
 };
 
 exports.setAlignMode = function (type) {
   return new Promise(function (resolve, reject) {
-    exec(resolve, reject, "printerk", "alignmode", [type]);
+    exec(resolve, reject, "PrinterKPlugin", "alignmode", [type]);
   });
 };
 
 exports.setFontZoom = function (hor, ver) {
   return new Promise(function (resolve, reject) {
-    exec(resolve, reject, "printerk", "fontzoom", [hor, ver]);
+    exec(resolve, reject, "PrinterKPlugin", "fontzoom", [hor, ver]);
   });
 };
 
@@ -38,13 +38,13 @@ exports.setFontZoom = function (hor, ver) {
 
 exports.pixelWrap = function (n) {
   return new Promise(function (resolve, reject) {
-    exec(resolve, reject, "printerk", "prixelwrap", [n]);
+    exec(resolve, reject, "PrinterKPlugin", "prixelwrap", [n]);
   });
 };
 
 exports.lineWrap = function (n) {
   return new Promise(function (resolve, reject) {
-    exec(resolve, reject, "printerk", "linewrap", [n]);
+    exec(resolve, reject, "PrinterKPlugin", "linewrap", [n]);
   });
 };
 
@@ -53,6 +53,6 @@ exports.lineWrap = function (n) {
 
 exports.cutPaper = function (mode, distance) {
   return new Promise(function (resolve, reject) {
-    exec(resolve, reject, "printerk", "cutPaper", [mode, distance]);
+    exec(resolve, reject, "PrinterKPlugin", "cutPaper", [mode, distance]);
   });
 };
