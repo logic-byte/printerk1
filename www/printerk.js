@@ -1,36 +1,36 @@
 var exec = require('cordova/exec');
 
 exports.coolMethod = function (arg0, success, error) {
-  exec(success, error, 'printerk1', 'coolMethod', [arg0]);
+  exec(success, error, 'printerk', 'coolMethod', [arg0]);
 };
 
 exports.printerInit = function () {
   return new Promise(function (resolve, reject) {
-    cordova.exec(resolve, reject, "printerk1", "printerInit", []);
+    cordova.exec(resolve, reject, "printerk", "printerInit", []);
   });
 },
 
 exports.printColumnsText = function (colsTextArr, colsWidthArr, colsAlign) {
   return new Promise(function (resolve, reject) {
-    exec(resolve, reject, "printerk1", "printColumnsText", [colsTextArr, colsWidthArr, colsAlign]);
+    exec(resolve, reject, "printerk", "printColumnsText", [colsTextArr, colsWidthArr, colsAlign]);
   });
 };
 
 exports.printText = function (text) {
   return new Promise(function (resolve, reject) {
-    exec(resolve, reject, "printerk1", "printText", [text]);
+    exec(resolve, reject, "printerk", "printText", [text]);
   });
 };
 
 exports.setAlignMode = function (type) {
   return new Promise(function (resolve, reject) {
-    exec(resolve, reject, "printerk1", "alignmode", [type]);
+    exec(resolve, reject, "printerk", "alignmode", [type]);
   });
 };
 
 exports.setFontZoom = function (hor, ver) {
   return new Promise(function (resolve, reject) {
-    exec(resolve, reject, "printerk1", "fontzoom", [hor, ver]);
+    exec(resolve, reject, "printerk", "fontzoom", [hor, ver]);
   });
 };
 
@@ -38,13 +38,13 @@ exports.setFontZoom = function (hor, ver) {
 
 exports.pixelWrap = function (n) {
   return new Promise(function (resolve, reject) {
-    exec(resolve, reject, "printerk1", "prixelwrap", [n]);
+    exec(resolve, reject, "printerk", "prixelwrap", [n]);
   });
 };
 
 exports.lineWrap = function (n) {
   return new Promise(function (resolve, reject) {
-    exec(resolve, reject, "printerk1", "linewrap", [n]);
+    exec(resolve, reject, "printerk", "linewrap", [n]);
   });
 };
 
@@ -53,6 +53,6 @@ exports.lineWrap = function (n) {
 
 exports.cutPaper = function (mode, distance) {
   return new Promise(function (resolve, reject) {
-    exec(resolve, reject, "printerk1", "cutPaper", [mode, distance]);
+    exec(resolve, reject, "printerk", "cutPaper", [mode, distance]);
   });
 };
