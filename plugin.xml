@@ -10,7 +10,7 @@
   <platform name="android">
     <config-file parent="/*" target="res/xml/config.xml">
       <feature name="Printer">
-        <param name="android-package" value="com.printerk.cordova.Printer" />
+        <param name="android-package" value="com.printerk.cordova.PrinterK" />
         <param name="onload" value="true" />
       </feature>
     </config-file>
@@ -21,7 +21,7 @@
         </intent-filter>
       </service>
     </config-file>
-    <source-file src="src/android/Printer.java" target-dir="src/com/printerk/cordova/Printer" />
+    <source-file src="src/android/Printer.java" target-dir="src/com/printerk/cordova/PrinterK" />
     <source-file src="src/android/com/sunmi/extprinterservice/ExtPrinterService.aidl" target-dir="src/com/sunmi/extprinterservice/"/>
   </platform>
 </plugin>
