@@ -1,0 +1,22 @@
+{
+  "name": "printerk1",
+  "version": "1.0.0",
+  "description": "Sunmi K1 printer solution",
+  "main": "www/printerk1.js",
+  "scripts": {
+    "test": "echo \\\"Error: no test specified\\\" && exit 1"
+  },
+  "keywords": [
+    "cordova",
+    "sunmi",
+    "k1"
+  ],
+  "author": "lbscanarias",
+  "license": "MIT",
+  "cordova": {
+    "id": "com.printerk1.cordova",
+    "platforms": [
+        "android"
+    ]
+  }
+}
