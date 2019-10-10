@@ -157,7 +157,7 @@ public class PrinterKPlugin extends CordovaPlugin {
   }
 
   public void printLogo () {
-    try {
+    /*try {
       AssetManager assetManager = cordova.getActivity().getAssets();
       InputStream istr = null;
       istr = assetManager.open("www/assets/images/logo.png");
@@ -167,7 +167,7 @@ public class PrinterKPlugin extends CordovaPlugin {
       //extPrinterService.printText(text);
     } catch (Exception e) {
       e.printStackTrace();
-    }
+    }*/
   }
 
   public void printColumnsText(JSONArray colsTextArr, JSONArray colsWidthArr, JSONArray colsAlign) {
