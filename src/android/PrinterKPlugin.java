@@ -115,6 +115,9 @@ public class PrinterKPlugin extends CordovaPlugin {
     } else if (action.equals("printerInit")) {
       this.printerInit();
       return true;
+    } else if (action.equals("printLogo")) {
+      this.printLogo();
+      return true;
     } else if (action.equals("cutPaper")) {
       this.cutPaper(args.getInt(0), args.getInt(1));
       return true;
@@ -148,6 +151,20 @@ public class PrinterKPlugin extends CordovaPlugin {
   public void printerInit() {
     try {
       extPrinterService.printerInit();
+    } catch (Exception e) {
+      e.printStackTrace();
+    }
+  }
+
+  public void printLogo () {
+    try {
+      AssetManager assetManager = cordova.getActivity().getAssets();
+      InputStream istr = null;
+      istr = assetManager.open("www/assets/images/logo.png");
+      Bitmap bitmap = BitmapFactory.decodeStream(istr);
+      extPrinterService.printBitmap(bitmap, 0);
+      extPrinterService.lineWrap(1);
+      //extPrinterService.printText(text);
     } catch (Exception e) {
       e.printStackTrace();
     }

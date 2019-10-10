@@ -10,6 +10,12 @@ exports.printerInit = function () {
   });
 },
 
+exports.printLogo = function () {
+  return new Promise(function (resolve, reject) {
+    exec(resolve, reject, "PrinterKPlugin", "printLogo", [text]);
+  });
+};
+
 exports.printColumnsText = function (colsTextArr, colsWidthArr, colsAlign) {
   return new Promise(function (resolve, reject) {
     exec(resolve, reject, "PrinterKPlugin", "printColumnsText", [colsTextArr, colsWidthArr, colsAlign]);
