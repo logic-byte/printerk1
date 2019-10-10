@@ -21,7 +21,7 @@
         </intent-filter>
       </service>
     </config-file>
-    <source-file src="src/android/Printer.java" target-dir="src/com/printerk/cordova/PrinterK" />
+    <source-file src="src/android/PrinterK.java" target-dir="src/com/printerk/cordova/PrinterK" />
     <source-file src="src/android/com/sunmi/extprinterservice/ExtPrinterService.aidl" target-dir="src/com/sunmi/extprinterservice/"/>
   </platform>
 </plugin>
