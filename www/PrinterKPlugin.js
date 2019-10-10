@@ -12,7 +12,7 @@ exports.printerInit = function () {
 
 exports.printLogo = function () {
   return new Promise(function (resolve, reject) {
-    exec(resolve, reject, "PrinterKPlugin", "printLogo", [text]);
+    exec(resolve, reject, "PrinterKPlugin", "printLogo", []);
   });
 };
 
