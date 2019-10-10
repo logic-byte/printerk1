@@ -22,5 +22,9 @@
     "platforms": [
         "android"
     ]
-  }
+  },
+  "bugs": {
+     "url": "https://github.com/logic-byte/printerk1/issues"
+   },
+   "homepage": "https://github.com/logic-byte/printerk1#readme"
 }
