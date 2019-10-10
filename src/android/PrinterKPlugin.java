@@ -64,6 +64,13 @@ import android.app.Activity;
 import org.apache.cordova.CordovaInterface;
 import org.apache.cordova.CordovaWebView;
 
+
+
+import android.content.res.AssetManager;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import java.io.InputStream;
+
 import com.sunmi.extprinterservice.ExtPrinterService;
 
 /**
@@ -157,7 +164,7 @@ public class PrinterKPlugin extends CordovaPlugin {
   }
 
   public void printLogo () {
-    /*try {
+    try {
       AssetManager assetManager = cordova.getActivity().getAssets();
       InputStream istr = null;
       istr = assetManager.open("www/assets/images/logo.png");
@@ -167,7 +174,7 @@ public class PrinterKPlugin extends CordovaPlugin {
       //extPrinterService.printText(text);
     } catch (Exception e) {
       e.printStackTrace();
-    }*/
+    }
   }
 
   public void printColumnsText(JSONArray colsTextArr, JSONArray colsWidthArr, JSONArray colsAlign) {
