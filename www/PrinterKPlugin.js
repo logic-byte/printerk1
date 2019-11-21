@@ -16,6 +16,12 @@ exports.printLogo = function () {
   });
 };
 
+exports.printContactLess = function () {
+  return new Promise(function (resolve, reject) {
+    exec(resolve, reject, "PrinterKPlugin", "printContactLess", []);
+  });
+};
+
 exports.printColumnsText = function (colsTextArr, colsWidthArr, colsAlign) {
   return new Promise(function (resolve, reject) {
     exec(resolve, reject, "PrinterKPlugin", "printColumnsText", [colsTextArr, colsWidthArr, colsAlign]);

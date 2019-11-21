@@ -125,6 +125,9 @@ public class PrinterKPlugin extends CordovaPlugin {
     } else if (action.equals("printLogo")) {
       this.printLogo();
       return true;
+    } else if (action.equals("printContactLess")) {
+      this.printContactLess();
+      return true;
     } else if (action.equals("cutPaper")) {
       this.cutPaper(args.getInt(0), args.getInt(1));
       return true;
