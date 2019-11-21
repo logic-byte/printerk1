@@ -177,6 +177,21 @@ public class PrinterKPlugin extends CordovaPlugin {
     }
   }
 
+  public void printContactLess () {
+      try {
+        AssetManager assetManager = cordova.getActivity().getAssets();
+        InputStream istr = null;
+        istr = assetManager.open("www/assets/imgs/contactless_ind_pos.png");
+        Bitmap bitmap = BitmapFactory.decodeStream(istr);
+        extPrinterService.printBitmap(bitmap, 0);
+        extPrinterService.lineWrap(1);
+        //extPrinterService.printText(text);
+      } catch (Exception e) {
+        e.printStackTrace();
+      }
+    }
+
+
   public void printColumnsText(JSONArray colsTextArr, JSONArray colsWidthArr, JSONArray colsAlign) {
     final String[] clst = new String[colsTextArr.length()];
     for (int i = 0; i < colsTextArr.length(); i++) {
