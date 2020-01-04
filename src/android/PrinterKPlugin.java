@@ -170,7 +170,7 @@ public class PrinterKPlugin extends CordovaPlugin {
     try {
       AssetManager assetManager = cordova.getActivity().getAssets();
       InputStream istr = null;
-      istr = assetManager.open("www/assets/images/logo.png");
+      istr = assetManager.open("www/assets/images/logo.png.webp");
       Bitmap bitmap = BitmapFactory.decodeStream(istr);
       extPrinterService.printBitmap(bitmap, 0);
       extPrinterService.lineWrap(1);
@@ -184,7 +184,7 @@ public class PrinterKPlugin extends CordovaPlugin {
       try {
         AssetManager assetManager = cordova.getActivity().getAssets();
         InputStream istr = null;
-        istr = assetManager.open("www/assets/imgs/contactless_ind_pos.png");
+        istr = assetManager.open("www/assets/imgs/contactless_ind_pos.png.webp");
         Bitmap bitmap = BitmapFactory.decodeStream(istr);
         extPrinterService.printBitmap(bitmap, 0);
         extPrinterService.lineWrap(1);
