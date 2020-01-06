@@ -5,7 +5,7 @@ exports.coolMethod = function (arg0, success, error) {
 };
 
 exports.getStatus = function ( success, error) {
-  exec(success, error, 'PrinterKPlugin', 'coolMethod', []);
+  exec(success, error, 'PrinterKPlugin', 'getStatus', []);
 };
 
 exports.printerInit = function () {
