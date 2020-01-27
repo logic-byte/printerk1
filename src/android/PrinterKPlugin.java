@@ -123,7 +123,7 @@ public class PrinterKPlugin extends CordovaPlugin {
       this.printerInit();
       return true;
     } else if (action.equals("printLogo")) {
-      this.printLogo();
+      this.printLogo(args.getJSONArray(0));
       return true;
     } else if (action.equals("printContactLess")) {
       this.printContactLess();
@@ -166,11 +166,11 @@ public class PrinterKPlugin extends CordovaPlugin {
     }
   }
 
-  public void printLogo () {
+  public void printLogo (String url_logo) {
     try {
       AssetManager assetManager = cordova.getActivity().getAssets();
       InputStream istr = null;
-      istr = assetManager.open("www/assets/images/logo.png.webp");
+      istr = assetManager.open(url_logo);
       Bitmap bitmap = BitmapFactory.decodeStream(istr);
       extPrinterService.printBitmap(bitmap, 0);
       extPrinterService.lineWrap(1);

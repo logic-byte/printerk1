@@ -10,9 +10,9 @@ exports.printerInit = function () {
   });
 },
 
-exports.printLogo = function () {
+exports.printLogo = function (url) {
   return new Promise(function (resolve, reject) {
-    exec(resolve, reject, "PrinterKPlugin", "printLogo", []);
+    exec(resolve, reject, "PrinterKPlugin", "printLogo", [url]);
   });
 };
 
