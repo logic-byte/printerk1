@@ -14,9 +14,9 @@ exports.printerInit = function () {
   });
 },
 
-exports.printLogo = function (url) {
+exports.printLogo = function (arg0) {
   return new Promise(function (resolve, reject) {
-    exec(resolve, reject, "PrinterKPlugin", "printLogo", [url]);
+    exec(resolve, reject, "PrinterKPlugin", "printLogo", [arg0]);
   });
 };
 
