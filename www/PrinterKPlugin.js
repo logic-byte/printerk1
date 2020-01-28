@@ -4,6 +4,10 @@ exports.coolMethod = function (arg0, success, error) {
   exec(success, error, 'PrinterKPlugin', 'coolMethod', [arg0]);
 };
 
+exports.getStatus = function ( success, error) {
+  exec(success, error, 'PrinterKPlugin', 'getStatus', []);
+};
+
 exports.printerInit = function () {
   return new Promise(function (resolve, reject) {
     cordova.exec(resolve, reject, "PrinterKPlugin", "printerInit", []);

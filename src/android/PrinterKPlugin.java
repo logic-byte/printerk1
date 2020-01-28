@@ -116,6 +116,9 @@ public class PrinterKPlugin extends CordovaPlugin {
       String message = args.getString(0);
       this.coolMethod(message, callbackContext);
       return true;
+    } else if (action.equals("getStatus")) {
+      this.getStatus(callbackContext);
+      return true;
     } else if (action.equals("printColumnsText")) {
       this.printColumnsText(args.getJSONArray(0), args.getJSONArray(1), args.getJSONArray(2));
       return true;
@@ -156,6 +159,16 @@ public class PrinterKPlugin extends CordovaPlugin {
     } else {
       callbackContext.error("Expected one non-empty string argument.");
     }
+  }
+
+  public void getStatus (CallbackContext callbackContext) {
+    try {
+      callbackContext.success(extPrinterService.getPrinterStatus());
+    } catch (RemoteException e) {
+      e.printStackTrace();
+      callbackContext.success( -1);;
+    }
+
   }
 
   public void printerInit() {
