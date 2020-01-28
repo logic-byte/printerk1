@@ -120,7 +120,7 @@ public class PrinterKPlugin extends CordovaPlugin {
       this.getStatus(callbackContext);
       return true;
     } else if (action.equals("printColumnsText")) {
-      this.printColumnsText(args.getString(0), args.getJSONArray(1), args.getJSONArray(2));
+      this.printColumnsText(args.getJSONArray(0), args.getJSONArray(1), args.getJSONArray(2));
       return true;
     } else if (action.equals("printerInit")) {
       this.printerInit();
